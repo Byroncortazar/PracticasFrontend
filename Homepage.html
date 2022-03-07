@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout y Rutas</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Estilo de header */
+        header {
+            background-color: rgb(243, 124, 124);
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+
+        /* Crear 2 columnas con la misma posición en la fila */
+        nav {
+            float: left;
+            width: 30%;
+            height: 600px;
+            /* only for demonstration, should be removed */
+            background: #ccc;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #f1f1f1;
+            height: 600px;
+        }
+
+        /* Clear floats after the columns */
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Estilo de footer */
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        /* Responsive layout */
+        @media (max-width: 600px) {
+
+            nav,
+            article {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2>Code cake</h2>
+    </header>
+
+    <section>
+        <nav>
+            <ul>
+                <li><a href="#">Pedidos</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="administracion.html">Administración</a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <h1>Pedidos</h1>
+            <p>Escoge los sabores y decoraciones que más te gusten. No olvides llenar el formulario con tus datos</p>
+            <table>
+                <tr>
+                    <h2>Sabores</h2>
+                    <td><strong>Sabor 1</strong></td>
+                    <td><strong>Sabor 2</strong></td>
+                    <td><strong>Sabor 3</strong></td>
+
+                    <tr>
+                        <td><label><input type="checkbox" id="cbox1" value="first_checkbox"> Chocolate $100.00</label><br></td>
+                        <td><label><input type="checkbox" id="cbox1" value="first_checkbox"> Fresa $100.00</label><br></td>
+                        <td><label><input type="checkbox" id="cbox1" value="first_checkbox"> Vainilla $100.00</label><br></td>
+
+                    </tr>
+                </tr>
+            </table>
+                        <table>
+                <tr>
+                    <h2>Decoraciones</h2>
+                    <td><strong>Decoración 1</strong></td>
+                    <td><strong>Decoracion 2</strong></td>
+                    <tr>
+                        <td><label><input type="checkbox" id="cbox1" value="first_checkbox"> Chispas de chocolate $10.00</label><br></td>
+                        <td><label><input type="checkbox" id="cbox1" value="first_checkbox"> Chispas de colores $10.00</label><br></td>
+
+                    </tr>
+                </tr>
+            </table>
+        <h1>DATOS PARA ENVÍO</h1>
+            <strong>Nombre </strong> <input type="text" id="Input1" name="Input1">
+            <br>
+            <strong>Teléfono </strong> <input type="text" id="Input1" name="Input1">
+            <br>
+            <strong>E-mail </strong> <input type="text" id="Input1" name="Input1">
+            <br>
+            <strong>Confirme la descripción de su pastel </strong> <input type="text" id="Input1" name="Input1">
+
+
+             
+
+
+
+
+
+
+
+
+        </article>
+    </section>
+    
+    <footer>
+        <center>
+            <table>
+                <tr>
+                <td><strong>Dirección</strong></td>
+                <td><strong>Teléfono</strong></td>
+                <td><strong>Horarios de atención</strong></td>
+                </tr>
+                <tr>
+                    <td>Calle 1, Colonia 1. Ciudad 1, </td>
+                    <td>555-555-5555</td>
+                    <td>Lunes a Viernes de 9:00 a 18:00 horas</td>
+                </tr>
+    
+            </table>
+        </center>      
+            
+    </footer>
+
+</body>
+
+</html>
+
+
